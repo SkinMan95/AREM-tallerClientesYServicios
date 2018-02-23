@@ -14,18 +14,6 @@ public class Ejercicio1 {
     public static void main(String[] args) throws Exception {
         String pageUrl = "http://www.escuelaing.edu.co/";
         URL webPage = new URL(pageUrl);
-
-        try (BufferedReader reader
-                = new BufferedReader(new InputStreamReader(webPage.openStream()))) {
-            String inputLine = null;
-            while ( (inputLine = reader.readLine()) != null ) {
-                System.out.println(inputLine);
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        
-        // -----------
         
         System.out.println("Protocol " + webPage.getProtocol());
         System.out.println("Authority " + webPage.getAuthority());
